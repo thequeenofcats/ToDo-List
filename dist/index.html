@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="popups">
+        <div class="add-project-popup">
+          <label for="project">Name of the project:</label>
+          <input type="text" name="project" id="projectName" required />
+          <div class="buttons-project-popup">
+            <button type="submit" class="add-project">Add project</button>
+            <button class="close-project-popup close">Close</button>
+          </div>
+        </div>
+        <div class="add-task-popup">
+          <div class="content">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" />
+            <label for="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="35"
+              rows="5"
+            ></textarea>
+            <label for="date">Due date:</label>
+            <input type="date" id="date" name="date" />
+            <label for="priority">Priority:</label>
+            <select name="priority" id="priority" class="priority-list">
+              <option value="high">high</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+            </select>
+            <div class="buttons">
+              <button class="submit-task submit-main-task">Add task</button>
+              <button class="close close-task">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-project-task-popup">
+          <div class="content">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="project-task-title" />
+            <label for="description">Description:</label>
+            <textarea
+              name="description"
+              class="description-project"
+              cols="35"
+              rows="5"
+              id="description"
+            ></textarea>
+            <label for="date">Due date:</label>
+            <input type="date" id="date" name="date" />
+            <label for="priority">Priority:</label>
+            <select name="priority" id="project-priority" class="priority-list">
+              <option value="high">high</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+            </select>
+            <div class="buttons">
+              <button class="submit-task submit-main-project-task">
+                Add task
+              </button>
+              <button class="close close-task">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects"></div>
+      <div class="daily-agenda">
+        <div class="title">
+          <h1>Daily Agenda</h1>
+          <button class="daily-agenda-plus project-plus plus">+</button>
+        </div>
+        <div class="tasks daily-tasks"></div>
+      </div>
+    </main>
+
+    <nav id="nav">
+      <div class="innertube">
+        <h3 class="daily-agenda-sidebar">Daily Agenda</h3>
+        <div class="projects-sidebar">
+          <h3 class="projects-link">Projects</h3>
+          <span class="plus sidebar-plus">+</span>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <script src="main.js"></script>
+</html>
